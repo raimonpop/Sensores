@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/activity1Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity1.Activity1Fragment"
+        android:label="fragment_activity1"
+        tools:layout="@layout/fragment_activity1" />
+    <fragment
+        android:id="@+id/activity2Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity2.Activity2Fragment"
+        android:label="fragment_activity2"
+        tools:layout="@layout/fragment_activity2" />
+    <fragment
+        android:id="@+id/activity3Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity3.Activity3Fragment"
+        android:label="fragment_activity3"
+        tools:layout="@layout/fragment_activity3" />
+    <fragment
+        android:id="@+id/activity4Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity4.Activity4Fragment"
+        android:label="fragment_activity4"
+        tools:layout="@layout/fragment_activity4" />
+    <fragment
+        android:id="@+id/activity5Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity5.Activity5Fragment"
+        android:label="fragment_activity5"
+        tools:layout="@layout/fragment_activity5" />
+    <fragment
+        android:id="@+id/activity6Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity6.Activity6Fragment"
+        android:label="fragment_activity6"
+        tools:layout="@layout/fragment_activity6" >
+        <action
+            android:id="@+id/action_activity6Fragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+        <action
+            android:id="@+id/action_activity6Fragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="raimon.pop.sensores.fragments.Activity6.PermissionsFragment"
+        android:label="PermissionsFragment" >
+        <action
+            android:id="@+id/action_permissionsFragment_to_activity6Fragment"
+            app:destination="@id/activity6Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activity7Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity7.Activity7Fragment"
+        android:label="fragment_activity7"
+        tools:layout="@layout/fragment_activity7" />
+    <fragment
+        android:id="@+id/activity8Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity8.Activity8Fragment"
+        android:label="fragment_activity8"
+        tools:layout="@layout/fragment_activity8" />
+    <fragment
+        android:id="@+id/activity9Fragment"
+        android:name="raimon.pop.sensores.fragments.Activity9.Activity9Fragment"
+        android:label="fragment_activity9"
+        tools:layout="@layout/fragment_activity9" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="raimon.pop.sensores.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_activity1"
+            app:destination="@id/activity1Fragment" />
+        <action
+            android:id="@+id/action_activity2"
+            app:destination="@id/activity2Fragment" />
+        <action
+            android:id="@+id/action_activity3"
+            app:destination="@id/activity3Fragment" />
+        <action
+            android:id="@+id/action_activity4"
+            app:destination="@id/activity4Fragment" />
+        <action
+            android:id="@+id/action_activity5"
+            app:destination="@id/activity5Fragment" />
+        <action
+            android:id="@+id/action_activity6"
+            app:destination="@id/permissionsFragment" />
+        <action
+            android:id="@+id/action_activity7"
+            app:destination="@id/activity7Fragment" />
+        <action
+            android:id="@+id/action_activity8"
+            app:destination="@id/activity8Fragment" />
+        <action
+            android:id="@+id/action_activity9"
+            app:destination="@id/activity9Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="raimon.pop.sensores.fragments.Activity6.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <argument
+            android:name="root_directory"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
